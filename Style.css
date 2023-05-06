@@ -1,0 +1,418 @@
+/**/
+
+/*
+	 Методичка:
+	 	.tow - обращение к классу;
+	 	#tow - идентификатор;
+	 	div?, h1, p, a, ul, li, img, nav, body, header, footer, main - тег;
+
+	 	#fff - белый;
+	 	#000 - чёрный;
+	 	ctrl+/ - закоментировать строчку;
+	 	ctrl+R - обновить страницу;
+*/
+
+/*
+	color:
+		#62D0DF - blue (textLogo);
+		#F9B640 - yellow;
+		#22356F - blacktext;
+		#F4F9E2 - bgHeader;
+
+*/		
+
+*{
+	padding: 0;
+	margin: 0;
+
+	font-family: larsseit_regular;
+}
+
+@font-face{
+	font-family: larsseit_regular; /*Имя шрифта*/
+	src: url(fonts/larsseit_regular.ttf); /*Путь шрифта*/
+}
+
+.container{ /*глобальная переменная*/
+	max-width: 1500px; /*Ограничение ширины блока*/
+	margin: 0 auto; /*Централь header nav ul{ное выравнивание (только, когда есть размеры данного блока*/
+}
+header{
+	padding-top: 25px;
+	position: relative;
+	padding-bottom: 100px;
+}
+header .bgHeader{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 100%;
+	background-color: #F4F9E2;
+}
+header nav{
+	margin-bottom: 150px;
+	position: relative;
+}
+header nav .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header nav a#one{
+	text-decoration: none;
+	color: #62D0DF;
+	font-size: 24px;
+	font-weight: 700;
+}
+header nav ul{
+	display: flex;
+}
+header nav ul li{
+	list-style: none; /*Без точек (апострофов)*/
+}
+header nav ul li a{
+	text-decoration: none;
+	color: #22356F;
+	padding: 10px 15px;
+	/*border: 2px solid #000; - ВСЕ границы блока*/
+	}
+header nav ul li:first-child a{ /*first-child - образение к первому li-блоку*/
+	border-bottom: 2px solid #22356F; /*Нижняя граница, существуют ещё top, right, bottom, left*/ 
+}
+header nav ul li a:hover{ /*hover-элемент поверхностной анимации*/
+	border-bottom: 2px solid #22356F;
+}
+header nav a#two{
+	text-decoration: none; /*Декороция текста в ссылке*/
+	color: #fff;
+	background-color: #62D0DF;
+	padding: 15px calc(15px * 2); /*Калькулятор*/
+	border-radius: 30px; /*Радиус скругления границ*/
+	text-transform: uppercase;	/*Верхний регистр текста*/
+}
+header .helping{
+	position: relative;
+}
+header .helping h2{
+	text-decoration: none;
+	color: #62D0DF;
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 50px;
+}
+header .helping h1{
+	color: 	#22356F;
+	font-size: 48px;
+	font-weight: 800;
+	max-width: 35%;
+	margin-bottom: 100px;
+}
+header .helping p{
+	color: 	#22356F;
+	font-size: 24px;
+	max-width: 35%;
+	line-height: 2; /*Межсточный интервал*/
+	margin-bottom: 50px;
+}
+header .helping .buttons{
+	display: flex;
+}
+header .helping .buttons a{
+	text-decoration: none;
+	padding: 15px calc(15px * 2);
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 3px; /*Межбуквенный интервал*/
+}
+header .helping .buttons a:first-child{
+	background-color: #F9B640;
+	color: 	#fff;
+	transition: .5s;
+}
+header .helping .buttons a:first-child:hover{
+	background-color: #fff;
+	color: 	#F9B640;
+}
+header .helping .buttons a:last-child{ /*last-child-Обращение к последней ссылке*/
+	color: #F9B640;
+}
+header .helping img{
+	position: absolute;
+	top: -25%;
+	right: 0;
+}
+main{
+
+}
+main .WhyThrive{
+	display: flex;
+	margin-bottom: 150px;
+}
+main .WhyThrive .left{
+	width: 70%;
+	background-color: #62D0DF;
+}
+main .WhyThrive .left .container{
+	max-width: 950px;
+	padding-top: 200px;
+}
+main .WhyThrive .left .container h1{ /*Абсолиютно прямой путь к элементу (тегу)*/
+	color: #fff;
+	font-size: 36px;
+	margin-bottom: 75px;
+}
+main .WhyThrive .left .container p{
+	font-weight: 700;
+	color: #fff;
+	font-size: 24px;
+	line-height: 2;
+}
+main .WhyThrive .left .container p span{
+	font-weight: 400;
+	color: #fff;
+	font-size: 18px;
+}
+main .WhyThrive .right{
+	width: 30%;
+}
+main .WhyThrive .right img{
+	width: 100%;
+	height: 100%;
+}
+							/*Начало 5 урока*/
+main .aboutUs{
+	margin-bottom: 75px;
+}
+main .aboutUs .container{
+	position: relative;
+}
+main .aboutUs .container h1{
+	position: absolute;
+	top: 0;
+	left: -10%;
+	color: #22356F;
+	font-size: 20px;
+	font-weight: 300;
+}
+main .aboutUs .container p{
+	max-width: 50%;
+	margin: 0 auto;
+	color: #22356F;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.5;
+}
+main .weCanHelp{
+	margin-bottom: 100px;
+}
+main .weCanHelp p.weCanHelp{
+	margin-bottom: 25px;
+	text-align: center;
+	color: #22356F;
+	font-size: 20px;
+	font-weight: 300;
+}
+main .weCanHelp .blocks{
+	display: flex;
+	justify-content: space-between;
+}
+main .weCanHelp .block,
+main .health .block{
+	width: 25%;
+	padding: 50px 25px 300px 25px;
+}
+main .weCanHelp .block:nth-child(1){
+	background: #FFE2DE;
+}
+main .weCanHelp .block:nth-child(2){
+	background: #C4E769;
+}
+main .weCanHelp .block:nth-child(3){
+	background: #62D0DF;
+}
+main .weCanHelp .block:nth-child(4){
+	background: #0052C1;
+}
+main .weCanHelp .block hr,
+main .health .block hr{
+	border: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #FFFFFF;
+	margin-bottom: 10px;
+}
+main .weCanHelp .block .title,
+main .health .block .title{
+	display: flex;
+	align-items: center;
+}
+main .weCanHelp .title .circle,
+main .health .title .circle{
+	width: 10px;
+	height: 10px;
+	background-color: #E9B730;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+main .weCanHelp .title h1,
+main .health .title h1{
+	color: #FFFFFF;
+	font-size: 32px;
+	font-weight: 700;
+}
+							/*Начало 6 урока*/
+main .health .physical,
+main .health .Gymnastics,
+main .cardio .nutritionalPlans,
+main .cardio .hometraining{
+	display: flex;
+	justify-content: space-between;
+}
+main .health .block{
+	width: calc(100% / 3);
+}
+main .health .physical .block:nth-child(1){
+	background-color: #22356F;
+}
+main .health .physical .block:nth-child(2){
+	background-color: #0052C1;
+}
+main .health .physical .block:nth-child(3){
+/*сокращённый вариант*/
+	/*background:url(img/cocktail.png) 50% 50% no-repeat;*/ /*no-repeat - заполняет по оси X всё пространство блока до конца блока*/
+	/*background-size: cover;*/ /*cover - растягивание катринки*/
+/*полный вариант*/
+	background: url(img/cocktail.png); 
+	background-repeat: no-repeat;
+	background-size: cover; /*cover - растягивание катринки*/
+	background-position: 50% 50%; /*позиционирование картинки внутри блока*/
+}
+main .health .Gymnastics .block:nth-child(1){
+	background-color: #62D0DF;
+}
+main .health .Gymnastics .block:nth-child(2){
+	background-color: #DEE1FF;
+}
+main .health .Gymnastics .block:nth-child(3){
+	background-color: #8F00FF;
+}
+main .cardio .block{
+	padding: 100px;
+}
+main .cardio .block h1{
+	color: #22356F;
+	font-size: 28px;
+	margin-bottom: 50px;
+}
+main .cardio .block p{
+	color: #22356F;
+	font-size: 18px;
+	line-height: 2;
+}
+main .getHelpNow,
+main .contactUs{
+	display: flex;
+	justify-content: space-between;
+}
+main .getHelpNow .right,
+main .contactUs .left{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 150px 200px 100px 100px;
+}
+main .getHelpNow .right h1,
+main .contactUs .left h1{
+	color: #22356F
+	font-size: 16px;
+}
+main .getHelpNow .right p.text1{
+	color: #22356F;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.5: 
+}
+main .getHelpNow .right p.text1 span{
+	color: #6CD3E1;
+}
+main .getHelpNow .right a.text2,
+main .contactUs .left a.text2{
+	color: #FAB63E;
+	font-size: 16px;
+	text-decoration: none;
+}
+main .contactUs{
+	background-color: #22356F;
+}
+main .contactUs .left{
+	padding-left: 200px;
+}
+main .contactUs .left h1{
+	color: #fff;
+}
+main .contactUs .left h2{
+	color: #fff;
+	font-size: 64px;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+main .contactUs .left p.text1{
+	font-size: 36px;
+	color: #fff;
+	line-height: 1.5;
+}
+main .contactUs .left a.text2{
+	color: #62D0DF;
+}
+							/*Начало 7 урока*/
+footer .footer{
+	display: flex;
+	justify-content: space-between;
+}
+footer .footer .left{
+	width: 30%;
+}
+footer .footer .left img{
+	width: 100%;
+	height: 100%;
+}
+footer .footer .right{
+	width: 70%;
+}
+footer .footer .right .blocks{
+	display: flex;
+	justify-content: space-between;
+	padding: 100px 50px 0px 75px;
+}
+footer .footer .right .block{
+	width: 20%;
+}
+footer .footer .right .block h1{
+	font-size: 14px;
+	color: #22356F;
+	margin-bottom: 50px;
+}
+footer .footer .right .block p{
+	font-size: 14px;
+	color: rgba(34, 53, 111, 0.5);
+	line-height: 2;
+	margin-bottom: 50px;
+}
+footer .footer .right .block:nth-child(2) p:nth-child(3){
+	margin-bottom: 0;
+}
+footer .footer .right .block a{
+	font-size: 14px;
+}
+footer .underFooter{
+	background-color: #62D0DF;
+}
+footer .underFooter .container{
+	padding: 25px 0;
+}
+footer .underFooter p{
+	font-size: 14px;
+	color: #fff;
+}
